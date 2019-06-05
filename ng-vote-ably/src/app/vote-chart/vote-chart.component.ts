@@ -20,7 +20,7 @@ export class VoteChartComponent implements OnInit {
 
 
 	ngOnInit() {
-        this.ably = new Ably.Realtime('6QdTiA.O9vBCw:8glD3fRTNhSEVJC5')
+        this.ably = new Ably.Realtime('aZOg9Q.m_-V1Q:K7SBRqYKFYKlnQ8a')
         //Attach to channel
 		this.receiveChannel = this.ably.channels.get('vote-channel')
 		// Ably Subscription
@@ -35,9 +35,9 @@ export class VoteChartComponent implements OnInit {
             this.chart= new Chart('canvas', {
                 type: 'bar',
                 data: {
-                    labels: ["Yes", "No", "MayBe"],
+                    labels: ["Mario", "Mikaela", "Marsida"],
                     datasets: [{
-                        label: 'Say yes!',
+                        label: 'Te fitoj me i miri!',
                         data: [this.yes_votes, this.no_votes, this.maybe_votes],
                         backgroundColor: [
                             'rgba(52, 217, 118, 1)',
